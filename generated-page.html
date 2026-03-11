@@ -1,0 +1,392 @@
+<html lang="vi" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vzone - Buôn Ma Thuột City Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#F8F7F4] font-['Inter'] text-[#1C1C1C] antialiased selection:bg-[#E8563A] selection:text-white">
+
+    <!-- Sticky Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-5 bg-transparent text-white border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-3xl font-['DM_Serif_Display'] tracking-tight flex items-center gap-2 group">
+                <i data-lucide="compass" class="text-[#E8563A] group-hover:rotate-45 transition-transform duration-500"></i>
+                Vzone<span class="text-[#E8563A]">.</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-10 font-['Space_Grotesk'] text-sm uppercase tracking-widest font-medium">
+                <a href="#" class="hover:text-[#E8563A] transition-colors">Trang Chủ</a>
+                <a href="#" class="hover:text-[#E8563A] transition-colors">Bài Viết</a>
+                <a href="#" class="hover:text-[#E8563A] transition-colors">Giới Thiệu</a>
+                <a href="#" class="hover:text-[#E8563A] transition-colors">Liên Hệ</a>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <button aria-label="Search" class="hover:text-[#E8563A] transition-colors">
+                    <i data-lucide="search" class="w-6 h-6"></i>
+                </button>
+                <button aria-label="Menu" class="md:hidden hover:text-[#E8563A] transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative w-full h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-[#1A1A2E]">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" alt="Dak Lak Landscape" class="w-full h-full object-cover opacity-60 mix-blend-overlay">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1A1A2E] via-transparent to-black/30"></div>
+        </div>
+        
+        <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto mt-20">
+            <span class="inline-block py-1 px-3 border border-white/30 bg-white/10 backdrop-blur-sm text-xs font-['Space_Grotesk'] uppercase tracking-widest mb-6 rounded-full">Khám Phá Buôn Ma Thuột</span>
+            <h1 class="text-5xl md:text-7xl font-['DM_Serif_Display'] tracking-tight mb-6 leading-tight">Những Địa Điểm <br><span class="text-[#E8563A] italic">Không Thể Bỏ Lỡ</span></h1>
+            <p class="text-lg md:text-xl font-['Inter'] font-normal text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Toplist nhà hàng, quán ăn, dịch vụ tại Buôn Ma Thuột được Vzone bình chọn và chia sẻ. Trải nghiệm thành phố theo cách của người bản địa.
+            </p>
+            <a href="#latest" class="inline-flex items-center gap-2 bg-[#E8563A] text-white px-8 py-4 font-['Space_Grotesk'] text-sm uppercase tracking-widest font-semibold hover:bg-[#d04a30] transition-colors rounded-none">
+                Xem Toplist <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="absolute bottom-0 w-full bg-black/40 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-5xl mx-auto px-6 py-6 flex flex-wrap justify-between items-center text-white gap-6">
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+                    <span class="text-4xl font-['DM_Serif_Display'] tracking-tight text-[#E8563A]">100+</span>
+                    <span class="text-sm font-['Space_Grotesk'] uppercase tracking-widest text-gray-300">Bài Viết</span>
+                </div>
+                <div class="hidden md:block w-px h-10 bg-white/20"></div>
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+                    <span class="text-4xl font-['DM_Serif_Display'] tracking-tight text-[#E8563A]">20</span>
+                    <span class="text-sm font-['Space_Grotesk'] uppercase tracking-widest text-gray-300">Danh Mục</span>
+                </div>
+                <div class="hidden md:block w-px h-10 bg-white/20"></div>
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+                    <span class="text-4xl font-['DM_Serif_Display'] tracking-tight text-[#E8563A]">BMT</span>
+                    <span class="text-sm font-['Space_Grotesk'] uppercase tracking-widest text-gray-300">Đắk Lắk</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Horizontal Category Navigation -->
+    <div class="sticky top-[76px] z-40 bg-[#FFFFFF]/90 backdrop-blur-md border-b border-[#E5E7EB] shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex overflow-x-auto gap-3 [&amp;::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            <button class="flex-shrink-0 px-6 py-2 border border-[#E8563A] bg-[#E8563A] text-white rounded-full font-['Space_Grotesk'] text-sm uppercase tracking-wider transition-colors cursor-pointer">Tất cả</button>
+            <button class="flex-shrink-0 px-6 py-2 border border-[#E5E7EB] bg-white text-[#1C1C1C] rounded-full font-['Space_Grotesk'] text-sm uppercase tracking-wider hover:border-[#E8563A] hover:text-[#E8563A] transition-colors cursor-pointer">Thú Cưng</button>
+            <button class="flex-shrink-0 px-6 py-2 border border-[#E5E7EB] bg-white text-[#1C1C1C] rounded-full font-['Space_Grotesk'] text-sm uppercase tracking-wider hover:border-[#E8563A] hover:text-[#E8563A] transition-colors cursor-pointer">Xây Dựng</button>
+            <button class="flex-shrink-0 px-6 py-2 border border-[#E5E7EB] bg-white text-[#1C1C1C] rounded-full font-['Space_Grotesk'] text-sm uppercase tracking-wider hover:border-[#E8563A] hover:text-[#E8563A] transition-colors cursor-pointer">Xe Cộ &amp; Di Chuyển</button>
+            <button class="flex-shrink-0 px-6 py-2 border border-[#E5E7EB] bg-white text-[#1C1C1C] rounded-full font-['Space_Grotesk'] text-sm uppercase tracking-wider hover:border-[#E8563A] hover:text-[#E8563A] transition-colors cursor-pointer">Y Tế &amp; Sức Khỏe</button>
+            <button class="flex-shrink-0 px-6 py-2 border border-[#E5E7EB] bg-white text-[#1C1C1C] rounded-full font-['Space_Grotesk'] text-sm uppercase tracking-wider hover:border-[#E8563A] hover:text-[#E8563A] transition-colors cursor-pointer">Mắt</button>
+            <button class="flex-shrink-0 px-6 py-2 border border-[#E5E7EB] bg-white text-[#1C1C1C] rounded-full font-['Space_Grotesk'] text-sm uppercase tracking-wider hover:border-[#E8563A] hover:text-[#E8563A] transition-colors cursor-pointer">Ăn Uống</button>
+            <button class="flex-shrink-0 px-6 py-2 border border-[#E5E7EB] bg-white text-[#1C1C1C] rounded-full font-['Space_Grotesk'] text-sm uppercase tracking-wider hover:border-[#E8563A] hover:text-[#E8563A] transition-colors cursor-pointer">Blog</button>
+            <button class="flex-shrink-0 px-6 py-2 border border-[#E5E7EB] bg-white text-[#1C1C1C] rounded-full font-['Space_Grotesk'] text-sm uppercase tracking-wider hover:border-[#E8563A] hover:text-[#E8563A] transition-colors cursor-pointer">Cưới Hỏi</button>
+            <button class="flex-shrink-0 px-6 py-2 border border-[#E5E7EB] bg-white text-[#1C1C1C] rounded-full font-['Space_Grotesk'] text-sm uppercase tracking-wider hover:border-[#E8563A] hover:text-[#E8563A] transition-colors cursor-pointer">Làm Đẹp</button>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="w-full">
+        
+        <!-- Latest Articles Section -->
+        <section id="latest" class="max-w-7xl mx-auto px-6 py-24">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-[#E5E7EB] pb-6 gap-4">
+                <h2 class="text-3xl md:text-4xl font-['DM_Serif_Display'] tracking-tight text-[#1A1A2E] relative">
+                    Bài Viết Mới Nhất
+                    <span class="absolute -bottom-[25px] left-0 w-16 h-1 bg-[#E8563A]"></span>
+                </h2>
+                <a href="#" class="text-[#E8563A] font-['Space_Grotesk'] text-sm uppercase tracking-widest font-semibold hover:text-[#1A1A2E] transition-colors flex items-center gap-1">
+                    Xem tất cả <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <article class="bg-[#FFFFFF] rounded-lg shadow-[0_2px_12px_rgba(0,0,0,0.07)] hover:-translate-y-2 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 group cursor-pointer flex flex-col overflow-hidden">
+                    <div class="relative w-full aspect-video overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Salon" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <div class="absolute top-4 left-4 bg-[#1A1A2E] text-white text-xs font-['Space_Grotesk'] px-3 py-1 uppercase tracking-wider rounded">12 Th10</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <span class="text-[#E8563A] text-xs font-['Space_Grotesk'] uppercase tracking-widest font-semibold mb-3">Làm Đẹp</span>
+                        <h3 class="text-xl font-['DM_Serif_Display'] tracking-tight text-[#1C1C1C] mb-4 line-clamp-2 group-hover:text-[#E8563A] transition-colors leading-snug">
+                            Top 3 cửa hàng bán thuốc uốn tóc tốt nhất BMT
+                        </h3>
+                        <p class="text-lg font-['Inter'] font-normal text-[#6B7280] line-clamp-2 mt-auto">
+                            Khám phá những địa chỉ cung cấp mỹ phẩm ngành tóc uy tín, chất lượng hàng đầu tại khu vực trung tâm.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="bg-[#FFFFFF] rounded-lg shadow-[0_2px_12px_rgba(0,0,0,0.07)] hover:-translate-y-2 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 group cursor-pointer flex flex-col overflow-hidden">
+                    <div class="relative w-full aspect-video overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Medical" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <div class="absolute top-4 left-4 bg-[#1A1A2E] text-white text-xs font-['Space_Grotesk'] px-3 py-1 uppercase tracking-wider rounded">10 Th10</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <span class="text-[#E8563A] text-xs font-['Space_Grotesk'] uppercase tracking-widest font-semibold mb-3">Y Tế &amp; Sức Khỏe</span>
+                        <h3 class="text-xl font-['DM_Serif_Display'] tracking-tight text-[#1C1C1C] mb-4 line-clamp-2 group-hover:text-[#E8563A] transition-colors leading-snug">
+                            Top 3 địa chỉ truyền nước tại Buôn Ma Thuột
+                        </h3>
+                        <p class="text-lg font-['Inter'] font-normal text-[#6B7280] line-clamp-2 mt-auto">
+                            Danh sách các phòng khám và cơ sở y tế cung cấp dịch vụ truyền dịch an toàn, được cấp phép chuẩn bộ y tế.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="bg-[#FFFFFF] rounded-lg shadow-[0_2px_12px_rgba(0,0,0,0.07)] hover:-translate-y-2 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 group cursor-pointer flex flex-col overflow-hidden">
+                    <div class="relative w-full aspect-video overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Gold" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <div class="absolute top-4 left-4 bg-[#1A1A2E] text-white text-xs font-['Space_Grotesk'] px-3 py-1 uppercase tracking-wider rounded">08 Th10</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <span class="text-[#E8563A] text-xs font-['Space_Grotesk'] uppercase tracking-widest font-semibold mb-3">Tài Chính</span>
+                        <h3 class="text-xl font-['DM_Serif_Display'] tracking-tight text-[#1C1C1C] mb-4 line-clamp-2 group-hover:text-[#E8563A] transition-colors leading-snug">
+                            Có nên mua vàng tại tiệm vàng Kim Môn BMT Đắk Lắk không?
+                        </h3>
+                        <p class="text-lg font-['Inter'] font-normal text-[#6B7280] line-clamp-2 mt-auto">
+                            Đánh giá chi tiết về chất lượng, giá cả và dịch vụ chăm sóc khách hàng tại một trong những tiệm vàng lâu đời.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="bg-[#FFFFFF] rounded-lg shadow-[0_2px_12px_rgba(0,0,0,0.07)] hover:-translate-y-2 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 group cursor-pointer flex flex-col overflow-hidden">
+                    <div class="relative w-full aspect-video overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Beauty" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <div class="absolute top-4 left-4 bg-[#1A1A2E] text-white text-xs font-['Space_Grotesk'] px-3 py-1 uppercase tracking-wider rounded">05 Th10</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <span class="text-[#E8563A] text-xs font-['Space_Grotesk'] uppercase tracking-widest font-semibold mb-3">Mắt &amp; Làm Đẹp</span>
+                        <h3 class="text-xl font-['DM_Serif_Display'] tracking-tight text-[#1C1C1C] mb-4 line-clamp-2 group-hover:text-[#E8563A] transition-colors leading-snug">
+                            Top 4 địa chỉ trị thâm quầng mắt tại Buôn Ma Thuột
+                        </h3>
+                        <p class="text-lg font-['Inter'] font-normal text-[#6B7280] line-clamp-2 mt-auto">
+                            Lấy lại thanh xuân cho đôi mắt với những spa và thẩm mỹ viện áp dụng công nghệ trị liệu tiên tiến nhất.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Category Section: Dịch Vụ Nổi Bật -->
+        <section class="max-w-7xl mx-auto px-6 py-24 border-t border-[#E5E7EB]/50">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-[#E5E7EB] pb-6 gap-4">
+                <h2 class="text-3xl md:text-4xl font-['DM_Serif_Display'] tracking-tight text-[#1A1A2E] relative flex items-center gap-3">
+                    <span class="text-3xl grayscale">✨</span> Dịch Vụ Nổi Bật
+                    <span class="absolute -bottom-[25px] left-0 w-16 h-1 bg-[#E8563A]"></span>
+                </h2>
+                <a href="#" class="text-[#E8563A] font-['Space_Grotesk'] text-sm uppercase tracking-widest font-semibold hover:text-[#1A1A2E] transition-colors flex items-center gap-1">
+                    Xem tất cả <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 5 -->
+                <article class="bg-[#FFFFFF] rounded-lg shadow-[0_2px_12px_rgba(0,0,0,0.07)] hover:-translate-y-2 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 group cursor-pointer flex flex-col overflow-hidden">
+                    <div class="relative w-full aspect-video overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1599305090598-fe179d501227?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Hair" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <div class="absolute top-4 left-4 bg-[#1A1A2E] text-white text-xs font-['Space_Grotesk'] px-3 py-1 uppercase tracking-wider rounded">01 Th10</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <span class="text-[#E8563A] text-xs font-['Space_Grotesk'] uppercase tracking-widest font-semibold mb-3">Cộng Đồng</span>
+                        <h3 class="text-xl font-['DM_Serif_Display'] tracking-tight text-[#1C1C1C] mb-4 line-clamp-2 group-hover:text-[#E8563A] transition-colors leading-snug">
+                            Hiến tóc ở BMT: địa chỉ nhận tóc hiến tại Buôn Ma Thuột
+                        </h3>
+                        <p class="text-lg font-['Inter'] font-normal text-[#6B7280] line-clamp-2 mt-auto">
+                            Hướng dẫn chi tiết quy trình và các salon tiếp nhận tóc hiến tặng cho bệnh nhân ung thư tại địa phương.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="bg-[#FFFFFF] rounded-lg shadow-[0_2px_12px_rgba(0,0,0,0.07)] hover:-translate-y-2 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 group cursor-pointer flex flex-col overflow-hidden">
+                    <div class="relative w-full aspect-video overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Airport Parking" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <div class="absolute top-4 left-4 bg-[#1A1A2E] text-white text-xs font-['Space_Grotesk'] px-3 py-1 uppercase tracking-wider rounded">28 Th09</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <span class="text-[#E8563A] text-xs font-['Space_Grotesk'] uppercase tracking-widest font-semibold mb-3">Di Chuyển</span>
+                        <h3 class="text-xl font-['DM_Serif_Display'] tracking-tight text-[#1C1C1C] mb-4 line-clamp-2 group-hover:text-[#E8563A] transition-colors leading-snug">
+                            Giá gửi xe ô tô ở sân bay BMT Đắk Lắk mới nhất
+                        </h3>
+                        <p class="text-lg font-['Inter'] font-normal text-[#6B7280] line-clamp-2 mt-auto">
+                            Cập nhật biểu phí đỗ xe qua đêm và ngắn hạn tại cảng hàng không Buôn Ma Thuột.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 7 -->
+                <article class="bg-[#FFFFFF] rounded-lg shadow-[0_2px_12px_rgba(0,0,0,0.07)] hover:-translate-y-2 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 group cursor-pointer flex flex-col overflow-hidden">
+                    <div class="relative w-full aspect-video overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Wedding" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <div class="absolute top-4 left-4 bg-[#1A1A2E] text-white text-xs font-['Space_Grotesk'] px-3 py-1 uppercase tracking-wider rounded">25 Th09</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <span class="text-[#E8563A] text-xs font-['Space_Grotesk'] uppercase tracking-widest font-semibold mb-3">Cưới Hỏi</span>
+                        <h3 class="text-xl font-['DM_Serif_Display'] tracking-tight text-[#1C1C1C] mb-4 line-clamp-2 group-hover:text-[#E8563A] transition-colors leading-snug">
+                            Top 6 nhà hàng tiệc cưới BMT sang trọng nhất
+                        </h3>
+                        <p class="text-lg font-['Inter'] font-normal text-[#6B7280] line-clamp-2 mt-auto">
+                            Lựa chọn không gian hoàn hảo cho ngày trọng đại với những trung tâm hội nghị tiệc cưới đẳng cấp bậc nhất.
+                        </p>
+                    </div>
+                </article>
+
+                 <!-- Card 8 -->
+                 <article class="bg-[#FFFFFF] rounded-lg shadow-[0_2px_12px_rgba(0,0,0,0.07)] hover:-translate-y-2 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 group cursor-pointer flex flex-col overflow-hidden">
+                    <div class="relative w-full aspect-video overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Coffee" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <div class="absolute top-4 left-4 bg-[#1A1A2E] text-white text-xs font-['Space_Grotesk'] px-3 py-1 uppercase tracking-wider rounded">20 Th09</div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <span class="text-[#E8563A] text-xs font-['Space_Grotesk'] uppercase tracking-widest font-semibold mb-3">Văn Hóa</span>
+                        <h3 class="text-xl font-['DM_Serif_Display'] tracking-tight text-[#1C1C1C] mb-4 line-clamp-2 group-hover:text-[#E8563A] transition-colors leading-snug">
+                            Buon Ma Thuot is Vietnam's coffee capital — What You Should Know
+                        </h3>
+                        <p class="text-lg font-['Inter'] font-normal text-[#6B7280] line-clamp-2 mt-auto">
+                            A deep dive into the rich history and vibrant café culture of the central highlands' bustling city.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Newsletter CTA -->
+        <section class="w-full bg-[#1A1A2E] py-24 px-6 text-center">
+            <div class="max-w-3xl mx-auto">
+                <i data-lucide="mail" class="w-12 h-12 text-[#E8563A] mx-auto mb-6"></i>
+                <h2 class="text-3xl md:text-5xl font-['DM_Serif_Display'] tracking-tight text-white mb-6">Đừng Bỏ Lỡ Địa Điểm Mới</h2>
+                <p class="text-lg md:text-xl font-['Inter'] text-gray-400 mb-10 font-normal">Đăng ký nhận bản tin hàng tuần từ Vzone để cập nhật những nhà hàng, quán cà phê và dịch vụ mới nhất tại Buôn Ma Thuột.</p>
+                <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto">
+                    <input type="email" placeholder="Địa chỉ email của bạn" class="flex-1 bg-white/10 border border-white/20 text-white px-6 py-4 placeholder:text-gray-500 focus:outline-none focus:border-[#E8563A] transition-colors font-['Inter']">
+                    <button type="button" class="bg-[#E8563A] text-white px-8 py-4 font-['Space_Grotesk'] text-sm uppercase tracking-widest font-semibold hover:bg-[#d04a30] transition-colors whitespace-nowrap rounded-none">
+                        Đăng Ký
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1C1C1C] text-white pt-24 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
+            <div class="col-span-1 md:col-span-1">
+                <a href="#" class="text-3xl font-['DM_Serif_Display'] tracking-tight flex items-center gap-2 mb-6">
+                    <i data-lucide="compass" class="text-[#E8563A]"></i>
+                    Vzone<span class="text-[#E8563A]">.</span>
+                </a>
+                <p class="text-lg text-gray-400 font-['Inter'] font-normal leading-relaxed mb-6">
+                    Nền tảng review và tổng hợp địa điểm, dịch vụ uy tín hàng đầu tại Buôn Ma Thuột, Đắk Lắk. Mang phong cách sống hiện đại đến với cộng đồng.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#E8563A] hover:text-white transition-colors text-gray-400"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#E8563A] hover:text-white transition-colors text-gray-400"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#E8563A] hover:text-white transition-colors text-gray-400"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-['Space_Grotesk'] text-sm uppercase tracking-widest font-semibold mb-6 text-white">Khám Phá</h4>
+                <ul class="space-y-4 text-lg font-['Inter'] text-gray-400">
+                    <li><a href="#" class="hover:text-[#E8563A] transition-colors">Ăn Uống</a></li>
+                    <li><a href="#" class="hover:text-[#E8563A] transition-colors">Làm Đẹp</a></li>
+                    <li><a href="#" class="hover:text-[#E8563A] transition-colors">Du Lịch &amp; Lưu Trú</a></li>
+                    <li><a href="#" class="hover:text-[#E8563A] transition-colors">Y Tế &amp; Sức Khỏe</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-['Space_Grotesk'] text-sm uppercase tracking-widest font-semibold mb-6 text-white">Về Vzone</h4>
+                <ul class="space-y-4 text-lg font-['Inter'] text-gray-400">
+                    <li><a href="#" class="hover:text-[#E8563A] transition-colors">Giới Thiệu</a></li>
+                    <li><a href="#" class="hover:text-[#E8563A] transition-colors">Liên Hệ Quảng Cáo</a></li>
+                    <li><a href="#" class="hover:text-[#E8563A] transition-colors">Điều Khoản Dịch Vụ</a></li>
+                    <li><a href="#" class="hover:text-[#E8563A] transition-colors">Chính Sách Bảo Mật</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-['Space_Grotesk'] text-sm uppercase tracking-widest font-semibold mb-6 text-white">Liên Hệ</h4>
+                <ul class="space-y-4 text-lg font-['Inter'] text-gray-400">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 mt-1 text-[#E8563A] shrink-0"></i>
+                        <span>TP. Buôn Ma Thuột, Đắk Lắk, Việt Nam</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="mail" class="w-5 h-5 text-[#E8563A] shrink-0"></i>
+                        <span>hello@vzone.vn</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="phone" class="w-5 h-5 text-[#E8563A] shrink-0"></i>
+                        <span>0123 456 789</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm font-['Inter'] text-gray-500 font-normal">© 2023 Vzone Directory. All rights reserved.</p>
+            <p class="text-sm font-['Inter'] text-gray-500 font-normal">Designed in BMT</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons with strict stroke-width 1.5
+        lucide.createIcons({
+            attrs: {
+                'stroke-width': 1.5
+            }
+        });
+
+        // Sticky Navbar Logic
+        const navbar = document.getElementById('navbar');
+        const navLinks = navbar.querySelectorAll('a, button');
+        const navLogo = navbar.querySelector('a.text-3xl');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                // Scrolled state
+                navbar.classList.replace('bg-transparent', 'bg-[#FFFFFF]/95');
+                navbar.classList.add('backdrop-blur-md', 'shadow-sm', 'border-[#E5E7EB]');
+                navbar.classList.replace('border-transparent', 'border-[#E5E7EB]');
+                
+                // Change text colors to dark
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white');
+                    if (!link.classList.contains('text-[#E8563A]')) {
+                        link.classList.add('text-[#1C1C1C]');
+                    }
+                });
+                navLogo.classList.remove('text-white');
+                navLogo.classList.add('text-[#1C1C1C]');
+
+            } else {
+                // Top state
+                navbar.classList.replace('bg-[#FFFFFF]/95', 'bg-transparent');
+                navbar.classList.remove('backdrop-blur-md', 'shadow-sm', 'border-[#E5E7EB]');
+                navbar.classList.replace('border-[#E5E7EB]', 'border-transparent');
+                
+                // Change text colors back to white
+                navLinks.forEach(link => {
+                    link.classList.remove('text-[#1C1C1C]');
+                    if (!link.classList.contains('text-[#E8563A]')) {
+                        link.classList.add('text-white');
+                    }
+                });
+                navLogo.classList.remove('text-[#1C1C1C]');
+                navLogo.classList.add('text-white');
+            }
+        });
+    </script>
+
+</body></html>
