@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import Image from 'next/image';
@@ -14,46 +14,46 @@ const posts = [
   {
     id: 1,
     slug: 'top-cua-hang-thuoc-nhuom-toc-bmt',
-    category: 'Lam dep',
-    title: 'Top 3 cua hang ban thuoc nhuom toc duoc hoi mua nhieu tai BMT',
+    category: 'Làm đẹp',
+    title: 'Top 3 cửa hàng bán thuốc nhuộm tóc được hỏi mua nhiều tại BMT',
     excerpt:
-      'Tong hop dia chi phu hop de chen quang cao thuoc nhuom, dan ve Shopee va giu chat review nhe giong bo cuc Vzone.',
+      'Tổng hợp địa chỉ phù hợp để chèn quảng cáo thuốc nhuộm, dẫn về Shopee và giữ chất review nhẹ giống bố cục Vzone.',
     date: '12 Th10',
     image: '/images/post-salon.png',
-    promoText: 'Thuoc nhuom toc dang giam 10% - hotline 0909 123 456',
+    promoText: 'Thuốc nhuộm tóc đang giảm 10% - hotline 0909 123 456',
   },
   {
     id: 2,
     slug: 'salon-toc-nhuom-phu-bac-buon-ma-thuot',
     category: 'Review salon',
-    title: 'Salon nao nhuom phu bac dep va hop de dat banner ban thuoc nhuom',
+    title: 'Salon nào nhuộm phủ bạc đẹp và hợp để đặt banner bán thuốc nhuộm',
     excerpt:
-      'Bai viet duoc them dong chu chay, CTA mua thuoc nhuom va nut chia se Facebook o cuoi card de de lan truyen.',
+      'Bài viết được thêm dòng chữ chạy, CTA mua thuốc nhuộm và nút chia sẻ Facebook ở cuối card để dễ lan truyền.',
     date: '10 Th10',
     image: '/images/post-clinic.png',
-    promoText: 'Sale 10% thuoc nhuom phu bac - dat online giao nhanh',
+    promoText: 'Sale 10% thuốc nhuộm phủ bạc - đặt online giao nhanh',
   },
   {
     id: 3,
     slug: 'mau-nau-lanh-thuoc-nhuom-hot',
-    category: 'Mau hot',
-    title: 'Mau nau lanh dang hot de chay quang cao thuoc nhuom trong bai review',
+    category: 'Màu hot',
+    title: 'Màu nâu lạnh đang hot để chạy quảng cáo thuốc nhuộm trong bài review',
     excerpt:
-      'Noi dung card duoc doi theo huong vua review vua chen khuyen mai nhe, phu hop yeu cau ban hang kem chia se linh tinh.',
+      'Nội dung card được đổi theo hướng vừa review vừa chèn khuyến mãi nhẹ, phù hợp yêu cầu bán hàng kèm chia sẻ linh tinh.',
     date: '08 Th10',
     image: '/images/post-gold.png',
-    promoText: 'Tang tu van chon mau mien phi khi dat thuoc nhuom hom nay',
+    promoText: 'Tặng tư vấn chọn màu miễn phí khi đặt thuốc nhuộm hôm nay',
   },
   {
     id: 4,
     slug: 'meo-giu-mau-toc-lau-phan-2',
-    category: 'Cham soc toc',
-    title: 'Meo giu mau toc lau hon sau khi nhuom de tang ti le chot don',
+    category: 'Chăm sóc tóc',
+    title: 'Mẹo giữ màu tóc lâu hơn sau khi nhuộm để tăng tỉ lệ chốt đơn',
     excerpt:
-      'Cuoi bai da co nut share Facebook va khu quang cao Shopee de dung cho demo ban san pham nhu user yeu cau.',
+      'Cuối bài đã có nút share Facebook và khu quảng cáo Shopee để dùng cho demo bán sản phẩm như yêu cầu.',
     date: '05 Th10',
     image: '/images/post-cafe.png',
-    promoText: 'Mua combo giu mau toc duoc freeship noi thanh',
+    promoText: 'Mua combo giữ màu tóc được freeship nội thành',
   },
 ];
 
@@ -61,9 +61,9 @@ const LatestPosts = () => {
   return (
     <section className={styles.section} id="latest">
       <div className={styles.header}>
-        <h2 className={styles.title}>Bai Viet Moi Nhat</h2>
+        <h2 className={styles.title}>Bài Viết Mới Nhất</h2>
         <Link href="/bai-viet" className={styles.viewAll}>
-          Xem tat ca <ArrowRight size={18} />
+          Xem tất cả <ArrowRight size={18} />
         </Link>
       </div>
 
@@ -76,7 +76,7 @@ const LatestPosts = () => {
         <div className={styles.shopBannerImage}>
           <Image
             src="/images/post-salon.png"
-            alt="Banner shop Shopee thuoc nhuom toc"
+            alt="Banner shop Shopee thuốc nhuộm tóc"
             fill
             className={styles.bannerImage}
           />
@@ -84,14 +84,13 @@ const LatestPosts = () => {
         <div className={styles.shopBannerContent}>
           <span className={styles.shopBadge}>Shopee shop</span>
           <h3 className={styles.shopTitle}>
-            Chen them 1 hinh anh tro thang toi khu ban thuoc nhuom tren Shopee
+            Chèn thêm 1 hình ảnh trỏ thẳng tới khu bán thuốc nhuộm trên Shopee
           </h3>
           <p className={styles.shopDescription}>
-            Banner nay nam ngay o khu bai viet gan day de nguoi xem co them 1 diem bam mua
-            hang.
+            Banner này nằm ngay ở khu bài viết gần đây để người xem có thêm 1 điểm bấm mua hàng.
           </p>
           <span className={styles.shopCta}>
-            Mo shop ngay <ArrowRight size={18} />
+            Mở shop ngay <ArrowRight size={18} />
           </span>
         </div>
       </a>

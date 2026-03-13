@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import Image from 'next/image';
@@ -52,19 +52,18 @@ const PostCard = ({
         <p className={styles.excerpt}>{excerpt}</p>
 
         <div className={styles.adBox}>
-          <span className={styles.adLabel}>Quang cao thuoc nhuom</span>
+          <span className={styles.adLabel}>Quảng cáo thuốc nhuộm</span>
           <p className={styles.adCopy}>
-            Thuoc nhuom toc dang duoc day vao bai viet de chot don mem hon, van giu cam
-            giac review.
+            Thuốc nhuộm tóc đang được đẩy vào bài viết để chốt đơn mềm hơn, vẫn giữ cảm giác review.
           </p>
           <Link href={shopUrl} className={styles.shopBtn} target="_blank" rel="noreferrer">
-            Xem tren Shopee <ArrowRight size={16} />
+            Xem trên Shopee <ArrowRight size={16} />
           </Link>
         </div>
 
         <a href={shareUrl} target="_blank" rel="noreferrer" className={styles.shareBtn}>
           <Facebook size={16} />
-          Chia se len Facebook
+          Chia sẻ lên Facebook
         </a>
       </div>
     </article>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ShoppingBag } from "lucide-react";
 import { clsx } from "clsx";
@@ -10,39 +10,39 @@ const shopeeUrl =
 const products = [
   {
     id: 1,
-    name: "Thuoc nhuom phu bac salon",
-    category: "Ban chay",
+    name: "Thuốc nhuộm phủ bạc salon",
+    category: "Bán chạy",
     description:
-      "Dong san pham duoc chon de len mau deu, phu bac nhanh va de tu van cho khach lam dep tai nha.",
+      "Dòng sản phẩm được chọn để lên màu đều, phủ bạc nhanh và dễ tư vấn cho khách làm đẹp tại nhà.",
     image: "/images/post-salon.png",
     featured: true,
   },
   {
     id: 2,
-    name: "Combo oxy + thuoc nhuom tone nau",
-    category: "Combo tiet kiem",
-    description: "Goi san cho khach chot nhanh tren trang chu va fanpage.",
+    name: "Combo oxy + thuốc nhuộm tone nâu",
+    category: "Combo tiết kiệm",
+    description: "Gói sẵn cho khách chốt nhanh trên trang chủ và fanpage.",
     image: "/images/hero-coffee.png",
   },
   {
     id: 3,
-    name: "Bo cham soc toc sau nhuom",
-    category: "Cham soc",
-    description: "Them upsell goi xa giu mau va serum bong toc.",
+    name: "Bộ chăm sóc tóc sau nhuộm",
+    category: "Chăm sóc",
+    description: "Thêm upsell gội xả giữ màu và serum bóng tóc.",
     image: "/images/post-cafe.png",
   },
   {
     id: 4,
-    name: "Thuoc tay toc muc nhe",
-    category: "Nang tone",
-    description: "De demo nhom san pham can tu van ky truoc khi mua.",
+    name: "Thuốc tẩy tóc mức nhẹ",
+    category: "Nâng tone",
+    description: "Để demo nhóm sản phẩm cần tư vấn kỹ trước khi mua.",
     image: "/images/hero-waterfall.png",
   },
   {
     id: 5,
-    name: "Phu kien salon va gang tay",
-    category: "Phu kien",
-    description: "Day ra ngoai trang chu theo bo cuc 5 bai giong Vzone.",
+    name: "Phụ kiện salon và găng tay",
+    category: "Phụ kiện",
+    description: "Đẩy ra ngoài trang chủ theo bố cục 5 bài giống Vzone.",
     image: "/images/post-gold.png",
   },
 ];
@@ -52,8 +52,8 @@ const ProductShowcase = () => {
     <section className={styles.section} id="shop">
       <div className={styles.header}>
         <div>
-          <p className={styles.eyebrow}>Chuyen muc ban san pham</p>
-          <h2 className={styles.title}>Khu thuoc nhuom duoc day ra ngoai trang chu</h2>
+          <p className={styles.eyebrow}>Chuyên mục bán sản phẩm</p>
+          <h2 className={styles.title}>Khu thuốc nhuộm được đẩy ra ngoài trang chủ</h2>
         </div>
         <Link href={shopeeUrl} className={styles.viewAll} target="_blank" rel="noreferrer">
           Xem shop Shopee <ArrowRight size={18} />

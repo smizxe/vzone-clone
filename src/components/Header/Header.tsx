@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -28,16 +28,16 @@ const Header = () => {
 
         <div className={styles.nav}>
           <Link href="/" className={styles.navLink}>
-            Trang chu
+            Trang chủ
           </Link>
           <Link href="/bai-viet" className={styles.navLink}>
-            Bai viet
+            Bài viết
           </Link>
           <Link href="/gioi-thieu" className={styles.navLink}>
-            Gioi thieu
+            Giới thiệu
           </Link>
           <Link href="/lien-he" className={styles.navLink}>
-            Lien he
+            Liên hệ
           </Link>
         </div>
 
@@ -45,9 +45,9 @@ const Header = () => {
           <button className={styles.iconBtn} aria-label="Search">
             <Search size={20} />
           </button>
-          <button className={clsx(styles.iconBtn, styles.cartBtn)} aria-label="Gio hang demo">
+          <button className={clsx(styles.iconBtn, styles.cartBtn)} aria-label="Giỏ hàng demo">
             <ShoppingCart size={18} />
-            <span className={styles.cartText}>Gio hang</span>
+            <span className={styles.cartText}>Giỏ hàng</span>
             <span className={styles.cartBadge}>2</span>
           </button>
           <button className={styles.iconBtn} aria-label="Menu">

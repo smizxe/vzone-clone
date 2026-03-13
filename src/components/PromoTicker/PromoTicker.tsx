@@ -1,4 +1,4 @@
-import styles from "./PromoTicker.module.css";
+﻿import styles from "./PromoTicker.module.css";
 
 interface PromoTickerProps {
   items: string[];
@@ -20,7 +20,7 @@ const PromoTicker = ({
         tone === "dark" ? styles.dark : styles.light,
         compact ? styles.compact : "",
       ].join(" ")}
-      aria-label="Thong bao khuyen mai"
+      aria-label="Thông báo khuyến mãi"
     >
       <div className={styles.track}>
         {repeatedItems.map((item, index) => (
