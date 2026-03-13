@@ -1,32 +1,32 @@
 'use client';
 
-import React, { useState } from 'react';
-import { 
-  Grid, 
-  Dog, 
-  Home, 
-  Car, 
-  HeartPulse, 
-  Eye, 
-  Utensils, 
-  BookOpen, 
-  Heart, 
-  Sparkles 
+import { useState } from 'react';
+import {
+  BookOpen,
+  Car,
+  Dog,
+  Eye,
+  Grid,
+  Heart,
+  HeartPulse,
+  Home,
+  Sparkles,
+  Utensils,
 } from 'lucide-react';
-import styles from './CategoryBar.module.css';
 import { clsx } from 'clsx';
+import styles from './CategoryBar.module.css';
 
 const categories = [
   { id: 'all', name: 'Tất cả', icon: Grid },
-  { id: 'pets', name: 'Thú Cưng', icon: Dog },
-  { id: 'construction', name: 'Xây Dựng', icon: Home },
-  { id: 'transport', name: 'Xe Cộ & Di Chuyển', icon: Car },
-  { id: 'health', name: 'Y Tế & Sức Khỏe', icon: HeartPulse },
+  { id: 'pets', name: 'Thú cưng', icon: Dog },
+  { id: 'construction', name: 'Xây dựng', icon: Home },
+  { id: 'transport', name: 'Xe cộ', icon: Car },
+  { id: 'health', name: 'Y tế', icon: HeartPulse },
   { id: 'eyes', name: 'Mắt', icon: Eye },
-  { id: 'f&b', name: 'Ăn Uống', icon: Utensils },
+  { id: 'fnb', name: 'Ăn uống', icon: Utensils },
   { id: 'blog', name: 'Blog', icon: BookOpen },
-  { id: 'wedding', name: 'Cưới Hỏi', icon: Heart },
-  { id: 'beauty', name: 'Làm Đẹp', icon: Sparkles },
+  { id: 'wedding', name: 'Cưới hỏi', icon: Heart },
+  { id: 'beauty', name: 'Làm đẹp', icon: Sparkles },
 ];
 
 const CategoryBar = () => {
@@ -37,6 +37,7 @@ const CategoryBar = () => {
       <div className={styles.scroller}>
         {categories.map((cat) => {
           const Icon = cat.icon;
+
           return (
             <button
               key={cat.id}

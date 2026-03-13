@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Compass, Search, Menu } from 'lucide-react';
-import styles from './Header.module.css';
+import { Compass, Menu, Search, ShoppingCart } from 'lucide-react';
 import { clsx } from 'clsx';
+import styles from './Header.module.css';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,6 +13,7 @@ const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -26,18 +27,31 @@ const Header = () => {
         </Link>
 
         <div className={styles.nav}>
-          <Link href="/" className={styles.navLink}>Trang Chủ</Link>
-          <Link href="/bai-viet" className={styles.navLink}>Bài Viết</Link>
-          <Link href="/gioi-thieu" className={styles.navLink}>Giới Thiệu</Link>
-          <Link href="/lien-he" className={styles.navLink}>Liên Hệ</Link>
+          <Link href="/" className={styles.navLink}>
+            Trang chu
+          </Link>
+          <Link href="/bai-viet" className={styles.navLink}>
+            Bai viet
+          </Link>
+          <Link href="/gioi-thieu" className={styles.navLink}>
+            Gioi thieu
+          </Link>
+          <Link href="/lien-he" className={styles.navLink}>
+            Lien he
+          </Link>
         </div>
 
         <div className={styles.actions}>
           <button className={styles.iconBtn} aria-label="Search">
-            <Search size={24} />
+            <Search size={20} />
+          </button>
+          <button className={clsx(styles.iconBtn, styles.cartBtn)} aria-label="Gio hang demo">
+            <ShoppingCart size={18} />
+            <span className={styles.cartText}>Gio hang</span>
+            <span className={styles.cartBadge}>2</span>
           </button>
           <button className={styles.iconBtn} aria-label="Menu">
-            <Menu size={24} />
+            <Menu size={20} />
           </button>
         </div>
       </div>

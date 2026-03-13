@@ -1,0 +1,70 @@
+.ticker {
+  overflow: hidden;
+  border-top: 1px solid rgba(26, 26, 46, 0.08);
+  border-bottom: 1px solid rgba(26, 26, 46, 0.08);
+}
+
+.light {
+  background: linear-gradient(90deg, #fff5ef 0%, #ffe0d3 50%, #fff5ef 100%);
+}
+
+.dark {
+  background: linear-gradient(90deg, #1a1a2e 0%, #2e2237 50%, #1a1a2e 100%);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.compact {
+  border-top: none;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee 26s linear infinite;
+}
+
+.item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 1rem 2.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.light .item {
+  color: var(--secondary);
+}
+
+.dark .item {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.item::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--primary);
+  margin-left: 2.5rem;
+  box-shadow: 0 0 18px rgba(232, 86, 58, 0.45);
+}
+
+.compact .item {
+  padding-top: 0.95rem;
+  padding-bottom: 0.95rem;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

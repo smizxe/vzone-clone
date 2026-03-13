@@ -43,6 +43,73 @@
   transition: all 0.3s ease;
 }
 
+.shopBanner {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: 0;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(135deg, #201f34 0%, #30263b 55%, #e8563a 140%);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 24px 44px rgba(26, 26, 46, 0.14);
+}
+
+.shopBannerImage {
+  position: relative;
+  min-height: 240px;
+}
+
+.bannerImage {
+  object-fit: cover;
+}
+
+.shopBannerContent {
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+}
+
+.shopBadge {
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.shopTitle {
+  max-width: 18ch;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  line-height: 1.1;
+  margin-bottom: 0.9rem;
+}
+
+.shopDescription {
+  max-width: 52ch;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.shopCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -54,5 +121,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
+  }
+
+  .shopBanner {
+    grid-template-columns: 1fr;
   }
 }

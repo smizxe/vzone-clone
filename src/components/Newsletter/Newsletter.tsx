@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { Mail } from 'lucide-react';
 import styles from './Newsletter.module.css';
 
@@ -9,20 +8,20 @@ const Newsletter = () => {
     <section className={styles.section}>
       <div className={styles.container}>
         <Mail size={48} className={styles.icon} />
-        <h2 className={styles.title}>Đừng Bỏ Lỡ Địa Điểm Mới</h2>
+        <h2 className={styles.title}>Đừng bỏ lỡ deal thuốc nhuộm mới</h2>
         <p className={styles.description}>
-          Đăng ký nhận bản tin hàng tuần từ Vzone để cập nhật những nhà hàng, 
-          quán cà phê và dịch vụ mới nhất tại Buôn Ma Thuột.
+          Đăng ký nhận bản tin để theo dõi bài review mới, chương trình giảm giá và các
+          cập nhật sản phẩm làm đẹp đang được đẩy trên trang chủ.
         </p>
         <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
-          <input 
-            type="email" 
-            placeholder="Địa chỉ email của bạn" 
+          <input
+            type="email"
+            placeholder="Địa chỉ email của bạn"
             className={styles.input}
             required
           />
           <button type="submit" className={styles.button}>
-            Đăng Ký
+            Đăng ký
           </button>
         </form>
       </div>

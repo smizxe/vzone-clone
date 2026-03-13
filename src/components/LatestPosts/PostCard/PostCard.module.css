@@ -44,6 +44,41 @@
   z-index: 10;
 }
 
+.ticker {
+  overflow: hidden;
+  border-top: 1px solid rgba(26, 26, 46, 0.06);
+  border-bottom: 1px solid rgba(26, 26, 46, 0.06);
+  background: linear-gradient(90deg, #fff8f4 0%, #ffe3d8 100%);
+}
+
+.tickerTrack {
+  display: flex;
+  width: max-content;
+  animation: run 18s linear infinite;
+}
+
+.tickerTrack span {
+  position: relative;
+  white-space: nowrap;
+  padding: 0.85rem 1.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
+.tickerTrack span::after {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-left: 1.6rem;
+  border-radius: 999px;
+  background: var(--primary);
+}
+
 .content {
   padding: 1.75rem;
   flex: 1;
@@ -79,9 +114,74 @@
   line-height: 1.6;
   color: var(--text-light);
   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-top: auto;
+}
+
+.adBox {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(232, 86, 58, 0.08) 0%, rgba(232, 86, 58, 0.14) 100%);
+  border: 1px solid rgba(232, 86, 58, 0.16);
+}
+
+.adLabel {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.adCopy {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+.shopBtn {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  background: var(--secondary);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.shareBtn {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1rem;
+  color: #1877f2;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@keyframes run {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
