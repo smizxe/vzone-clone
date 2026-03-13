@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, DM_Serif_Display, Space_Grotesk } from "next/font/google";
+import { Be_Vietnam_Pro, Playfair_Display, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const beVietnamPro = Be_Vietnam_Pro({
+  variable: "--font-be-vietnam-pro",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin", "vietnamese"],
 });
 
-const dmSerif = DM_Serif_Display({
-  variable: "--font-dm-serif",
-  weight: "400",
-  subsets: ["latin"],
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair-display",
+  subsets: ["latin", "vietnamese"],
 });
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
-  subsets: ["latin"],
+  subsets: ["latin", "vietnamese"],
 });
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
-      <body className={`${inter.variable} ${dmSerif.variable} ${spaceGrotesk.variable}`}>
+      <body className={`${beVietnamPro.variable} ${playfairDisplay.variable} ${spaceGrotesk.variable}`}>
         {children}
       </body>
     </html>
